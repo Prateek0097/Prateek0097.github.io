@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
   <script>
   $(function () {
 $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
@@ -68,10 +70,15 @@ $(document).ready(function () {
         }
     });
 });
+    $(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
  </script>
 
 </head>
-
+  <body>
+    <div class="se-pre-con"></div>
 
   <div class="container-fluid">
 
@@ -314,20 +321,7 @@ $(document).ready(function () {
 <p style="color:white;padding-left:70px;margin-top:-24px;">+91-9521423095</p>
 </div>
 </div>
-    <script>
-document.onreadystatechange = function () {
-  var state = document.readyState
-  if (state == 'interactive') {
-       document.getElementById('contents').style.visibility="hidden";
-  } else if (state == 'complete') {
-      setTimeout(function(){
-         document.getElementById('interactive');
-         document.getElementById('load').style.visibility="hidden";
-         document.getElementById('contents').style.visibility="visible";
-      },1000);
-  }
-}
-</script>
+    
 </div>
 
 
